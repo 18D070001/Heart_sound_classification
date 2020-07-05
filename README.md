@@ -4,19 +4,7 @@
 
 The 2016 PhysioNet/CinC Challenge aims to encourage the development of algorithms to classify heart sound recordings collected from a variety of clinical or nonclinical (such as in-home visits) environments. The aim is to identify, from a single short recording (10-60s) from a single precordial location, whether the subject of the recording should be referred on for an expert diagnosis.
 
-During the cardiac cycle, the heart firstly generates the electrical activity and then the electrical activity causes atrial and ventricular contractions. This in turn forces blood between the chambers of the heart and around the body. The opening and closure of the heart valves is associated with accelerations-decelerations of blood, giving rise to vibrations of the entire cardiac structure (the heart sounds and murmurs) [1]. These vibrations are audible at the chest wall, and listening for specific heart sounds can give an indication of the health of the heart. The phonocardiogram (PCG) is the graphical representation of a heart sound recording. 
-
-## About the project
-
-### PROPOSED HYPOTHESIS
-
-The current stethoscope is capable of recording heart sounds. The PCG signals obtained are
-temporal sequences and thus can be modeled using sophisticated Recurrent Neural Networks.
-Due to their well-known capabilities for modeling and analyzing sequential data even in the
-presence of noise [8], we developed an RNN model for automated cardiac auscultation[1].
-
-
-
+During the cardiac cycle, the heart firstly generates the electrical activity and then the electrical activity causes atrial and ventricular contractions. This in turn forces blood between the chambers of the heart and around the body. The opening and closure of the heart valves is associated with accelerations-decelerations of blood, giving rise to vibrations of the entire cardiac structure (the heart sounds and murmurs) . These vibrations are audible at the chest wall, and listening for specific heart sounds can give an indication of the health of the heart. The phonocardiogram (PCG) is the graphical representation of a heart sound recording. 
 
 ## Dataset
 
@@ -37,6 +25,16 @@ Download the files using your terminal: `wget -r -N -c -np https://physionet.org
 
 
 In each of the databases, each record begins with the same letter followed by a sequential, but random number. Files from the same patient are unlikely to be numerically adjacent. The training and test sets have each been divided so that they are two sets of mutually exclusive populations (i.e., no recordings from the same subject/patient were are in both training and test sets). Moreover, there are two data sets that have been placed exclusively in either the training or test databases (to ensure there are ‘novel’ recording types and to reduce overfitting on the recording methods). 
+
+## About the project
+
+### PROPOSED HYPOTHESIS
+
+The current stethoscope is capable of recording heart sounds. The PCG signals obtained are
+temporal sequences and thus can be modeled using sophisticated Recurrent Neural Networks.
+Due to their well-known capabilities for modeling and analyzing sequential data even in the
+presence of noise, we developed an RNN model for automated cardiac auscultation.
+
 
 ## PREPROCESSING
 ### Denoising
@@ -70,14 +68,14 @@ Python will be faster.
 
 
 
-## FEATURE SELECTION [1]
+## FEATURE SELECTION
 
-We used Mel-frequency cepstral coefficients (MFCCs) [10] to represent the PCG signal in
+We used Mel-frequency cepstral coefficients (MFCCs) to represent the PCG signal in
 compact representation. MFCCs are used almost in every study on automatic heart sound
 classification due to their effectiveness in speech analysis. We compute MFCCs from 25ms of
 the window with a step size of 10ms. We select the first 13 MFCCs for compact representation
 of the PCG signal as a large feature space does not always improve the recognition rate of the
-model[11].
+model.
 
 
 
@@ -114,7 +112,7 @@ threshold)
 
 
 ## CONCLUSION
-- RNN provides promising results with accuracy close to 70%.
+- RNN provides promising results with accuracy close to 70%. Idealy First we should align S1/S2 segments to get best results. 
 
 - The accuracy was increasing as the number of LSTM layers was increasing but resulted
 in a significantly larger computation period.
