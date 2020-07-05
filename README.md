@@ -120,5 +120,5 @@ in a significantly larger computation period.
 - There is a tradeoff between sensitivity and specificity depending on the threshold for
 classification.
 
--- for better accuracy, first one may use [springer segmentation code](https://github.com/davidspringer/Springer-Segmentation-Code) to segment and get the location of S1/ S2 and use this model. 
+**for better accuracy, first one may use [springer segmentation code](https://github.com/davidspringer/Springer-Segmentation-Code) to segment and get the location of S1/ S2 and use this model.**
 
