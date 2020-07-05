@@ -6,4 +6,13 @@ The 2016 PhysioNet/CinC Challenge aims to encourage the development of algorithm
 
 During the cardiac cycle, the heart firstly generates the electrical activity and then the electrical activity causes atrial and ventricular contractions. This in turn forces blood between the chambers of the heart and around the body. The opening and closure of the heart valves is associated with accelerations-decelerations of blood, giving rise to vibrations of the entire cardiac structure (the heart sounds and murmurs) [1]. These vibrations are audible at the chest wall, and listening for specific heart sounds can give an indication of the health of the heart. The phonocardiogram (PCG) is the graphical representation of a heart sound recording. 
 
+## Dataset
+
+The dataset used in this project is provided by 2016 Physionet/Cinc . 
+Heart sound recordings were sourced from several contributors around the world, collected at either a clinical or nonclinical environment, from both healthy subjects and pathological patients. The Challenge training set consists of five databases (A through E) containing a total of 3,126 heart sound recordings, lasting from 5 seconds to just over 120 seconds. You can [browse these files](https://physionet.org/content/challenge-2016/#files)  , or download the entire training set as a zip archive (169 MB) .
+
+In each of the databases, each record begins with the same letter followed by a sequential, but random number. Files from the same patient are unlikely to be numerically adjacent. The training and test sets have each been divided so that they are two sets of mutually exclusive populations (i.e., no recordings from the same subject/patient were are in both training and test sets). Moreover, there are two data sets that have been placed exclusively in either the training or test databases (to ensure there are ‘novel’ recording types and to reduce overfitting on the recording methods). Both the training set and the test set may be enriched after the close of the unofficial phase. The test set is unavailable to the public and will remain private for the purpose of scoring.
+
+
+
 this repository contains a Colab notebook to classify the heart sound as normal or abnormal
