@@ -26,6 +26,25 @@ Download the files using your terminal: `wget -r -N -c -np https://physionet.org
 
 In each of the databases, each record begins with the same letter followed by a sequential, but random number. Files from the same patient are unlikely to be numerically adjacent. The training and test sets have each been divided so that they are two sets of mutually exclusive populations (i.e., no recordings from the same subject/patient were are in both training and test sets). Moreover, there are two data sets that have been placed exclusively in either the training or test databases (to ensure there are ‘novel’ recording types and to reduce overfitting on the recording methods). 
 
+## The Model
+
+## RNN MODEL
+### Model Structure:
+- visible layer or input layer : size of input = 13 (mfcc matrix has column size 13)
+- hidden layer 1: LSTM layer
+- hidden layer 2: LSTM layer
+- 1 dense layer having activation function = "relu" (rectified linear)
+- output layer : classification  
+
+![download.png](attachment:download.png)  
+<font size="2">*In the figure, the dense layer is missing, but this is to give a brief idea of how the data is flowing in the model structure.*</font>  
+### Building the Model:
+- loss function: to compute the loss (currently "mean squared error")
+- optimizer function: adam
+- metrics: accuracy
+- **model.fit:** this function tries for the best possible fit of the model to the training data.
+<br>
+<font size="2"> <font color="brown"> The later part of the code was to try the model for different values of Dopout(lmabda) to calculate accuracy.</font>
 
 
 
