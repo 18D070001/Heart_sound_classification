@@ -9,9 +9,25 @@ During the cardiac cycle, the heart firstly generates the electrical activity an
 ## Dataset
 
 The dataset used in this project is provided by 2016 Physionet/Cinc . 
-Heart sound recordings were sourced from several contributors around the world, collected at either a clinical or nonclinical environment, from both healthy subjects and pathological patients. The Challenge training set consists of five databases (A through E) containing a total of 3,126 heart sound recordings, lasting from 5 seconds to just over 120 seconds. You can [browse these files](https://physionet.org/content/challenge-2016/#files)  , or download the entire training set as a zip archive (169 MB) .
+Heart sound recordings we)re sourced from several contributors around the world, collected at either a clinical or nonclinical environment, from both healthy subjects and pathological patients. The Challenge training set consists of five databases (A through E) containing a total of 3,126 heart sound recordings, lasting from 5 seconds to just over 120 seconds. You can [browse these files](https://physionet.org/content/challenge-2016/#files)  , or download the entire training set as a zip archive (169 MB) .
 
-In each of the databases, each record begins with the same letter followed by a sequential, but random number. Files from the same patient are unlikely to be numerically adjacent. The training and test sets have each been divided so that they are two sets of mutually exclusive populations (i.e., no recordings from the same subject/patient were are in both training and test sets). Moreover, there are two data sets that have been placed exclusively in either the training or test databases (to ensure there are ‘novel’ recording types and to reduce overfitting on the recording methods). Both the training set and the test set may be enriched after the close of the unofficial phase. The test set is unavailable to the public and will remain private for the purpose of scoring.
+### Files
+Total uncompressed size: 1.1 GB.
+
+Access the files
+[Download the ZIP file](https://physionet.org/static/published-projects/challenge-2016/classification-of-heart-sound-recordings-the-physionet-computing-in-cardiology-challenge-2016-1.0.0.zip) (1011.4 MB)
+
+Access the files using the Google Cloud Storage Browser [here](https://console.cloud.google.com/storage/browser/challenge-2016-1.0.0.physionet.org/)  . Login with a Google account is required.
+
+
+Access the data using Google Cloud "gsutil": `gsutil -m cp -r gs://challenge-2016-1.0.0.physionet.org DESTINATION`
+Download the files using your terminal: `wget -r -N -c -np https://physionet.org/files/challenge-2016/1.0.0/`
+
+
+In each of the databases, each record begins with the same letter followed by a sequential, but random number. Files from the same patient are unlikely to be numerically adjacent. The training and test sets have each been divided so that they are two sets of mutually exclusive populations (i.e., no recordings from the same subject/patient were are in both training and test sets). Moreover, there are two data sets that have been placed exclusively in either the training or test databases (to ensure there are ‘novel’ recording types and to reduce overfitting on the recording methods). 
+
+
+
 
 
 
